@@ -100,6 +100,7 @@ class Pagerduty {
     {
         // See http://developer.pagerduty.com/documentation/rest/users/show
         $pagerDutyUserURL = "{$this->URL}/users/{$userID}";
+        error_log($pagerDutyUserURL);
         $queryString = array('query' => array('include[]' => 'contact_methods'));
 
         $response = $this->httpClient->get($pagerDutyUserURL, $queryString);
