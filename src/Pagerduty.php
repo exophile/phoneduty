@@ -112,7 +112,7 @@ class Pagerduty {
 
             foreach($json['user']['contact_methods'] as $method) {
                 if($method['type'] == 'phone') {
-error_log("found" + $json['user']['name']);
+error_log("found" . $json['user']['name']);
                     $user = array(
                         'full_name'   => $json['user']['name'],
                         'first_name'  => $this->extractFirstName($json['user']['name']),
@@ -128,7 +128,7 @@ error_log("found" + $json['user']['name']);
             error_log("Status Code: " . $response->getStatusCode());
         }
 
-        error_log("user: " + $user);
+        error_log("user: " . $user);
         return $user;
     }
 
