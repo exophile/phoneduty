@@ -42,7 +42,6 @@ $pagerduty = new \Vend\Phoneduty\Pagerduty($APItoken, $serviceAPItoken, $domain)
 
 $userID = $pagerduty->getOncallUserForSchedule($scheduleID);
 $user = $pagerduty->getUserDetails($userID);
-error_log(print_r($user));
 
 $twilio = new Services_Twilio_Twiml();
 
