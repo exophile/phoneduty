@@ -118,7 +118,7 @@ class Pagerduty {
                         'first_name'  => $this->extractFirstName($json['user']['name']),
                         'local_time'    => $this->getCurrentTimeForTimezone(
                             $this->convertFriendlyTimezoneToFull($json['user']['time_zone'])),
-                        'phone_number' => "+{$method['country_code']}{$method['phone_number']}",
+                        'phone_number' => "+{$method['country_code']}{$method['address']}",
                     );
                     break;
                 }
