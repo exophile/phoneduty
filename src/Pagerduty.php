@@ -112,7 +112,6 @@ class Pagerduty {
 
             foreach($json['user']['contact_methods'] as $method) {
                 if($method['type'] == 'phone_contact_method') {
-                    error_log(print_r($method));
                     $user = array(
                         'full_name'   => $json['user']['name'],
                         'first_name'  => $this->extractFirstName($json['user']['name']),
@@ -128,7 +127,6 @@ class Pagerduty {
             error_log("Status Code: " . $response->getStatusCode());
         }
 
-        error_log("user: " . $json['user']['name']);
         return $user;
     }
 
