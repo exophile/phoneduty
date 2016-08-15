@@ -91,6 +91,7 @@ if (!isset($_SESSION['end_user_confirmed_call']) and strtolower($validate_human)
             }
         }
         $dial = $twilio->dial(NULL, $dialvars);
+        error_log($user['phone_number']);
         $dial->number($user['phone_number'], array('url' => "check_for_human.php"));
     } else {
         $twilio->redirect('voicemail.php');
