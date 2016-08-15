@@ -127,7 +127,7 @@ class Pagerduty {
             error_log("Status Code: " . $response->getStatusCode());
         }
 
-//error_log(var_dump($user));
+        error_log($user);
         return $user;
     }
 
