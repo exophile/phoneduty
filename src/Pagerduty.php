@@ -111,9 +111,8 @@ class Pagerduty {
             $json = json_decode($response->getBody(), true);
 
             foreach($json['user']['contact_methods'] as $method) {
-                error_log("type: " . $method['type']);
                 if($method['type'] == 'phone_contact_method') {
-error_log("found phone for " . $json['user']['name']);
+                    error_log(print_r($method));ß
                     $user = array(
                         'full_name'   => $json['user']['name'],
                         'first_name'  => $this->extractFirstName($json['user']['name']),
