@@ -112,7 +112,7 @@ class Pagerduty {
 
             foreach($json['user']['contact_methods'] as $method) {
                 error_log("type: " . $method['type']);
-                if($method['type'] == 'phone') {
+                if($method['type'] == 'phone_contact_method') {
 error_log("found phone for " . $json['user']['name']);
                     $user = array(
                         'full_name'   => $json['user']['name'],
