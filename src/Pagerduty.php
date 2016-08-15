@@ -128,7 +128,7 @@ error_log("found" . $json['user']['name']);
             error_log("Status Code: " . $response->getStatusCode());
         }
 
-        error_log("user: " . $user['full_name'];
+        error_log("user: " . $user['full_name']);
         return $user;
     }
 
