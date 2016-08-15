@@ -67,6 +67,7 @@ class Pagerduty {
         $oneSecondLater = urlencode($datetime->format(DateTime::ISO8601));
 
         $pagerDutyScheduleURL = "{$this->URL}/schedules/{$scheduleID}?since={$now}&until={$oneSecondLater}";
+        error_log($pagerDutyScheduleURL);
 
         $userID = null;
 
